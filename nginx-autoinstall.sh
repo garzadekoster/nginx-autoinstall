@@ -82,6 +82,9 @@ case $OPTION in
 		while [[ $CACHEPURGE != "y" && $CACHEPURGE != "n" ]]; do
 			read -p "       ngx_cache_purge [y/n]: " -e CACHEPURGE
 		done
+		while [[ $NAXSI != "y" && $NAXSI != "n" ]]; do
+			read -p "       naxsi [y/n]: " -e NAXSI
+		done
 		echo ""
 		echo "Choose your OpenSSL implementation :"
 		echo "   1) System's OpenSSL ($(openssl version | cut -c9-14))"
@@ -294,6 +297,23 @@ case $OPTION in
 				echo -ne "\n"
 			else
 				echo -e "       Downloading ngx_cache_purge    [${CRED}FAIL${CEND}]"
+				echo ""
+				echo "Please look at /tmp/nginx-autoinstall.log"
+				echo ""
+				exit 1
+			fi
+		fi
+		# Naxsi
+		if [[ "$NAXSI" = 'y' ]]; then
+			cd /usr/local/src/nginx/modules
+			echo -ne "       Downloading naxsi    [..]\r"
+			git clone https://github.com/nbs-system/naxsi.git >> /tmp/nginx-autoinstall.log 2>&1			
+
+			if [ $? -eq 0 ]; then
+				echo -ne "       Downloading naxsi    [${CGREEN}OK${CEND}]\r"
+				echo -ne "\n"
+			else
+				echo -e "       Downloading naxsi    [${CRED}FAIL${CEND}]"
 				echo ""
 				echo "Please look at /tmp/nginx-autoinstall.log"
 				echo ""
