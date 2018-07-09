@@ -523,7 +523,7 @@ case $OPTION in
 		fi
 		# Nginx
 		if [[ "$NGINX" = 'y' ]]; then
-			NGINX_MODULES=$(echo $NGINX_MODULES; echo "--add-module=/usr/local/src/nginx/modules/naxsi")
+			NGINX_MODULES=$(echo $NGINX_MODULES; echo "--add-module=/usr/local/src/nginx/modules/naxsi/naxsi_src")
 		fi
 		# Cloudflare's TLS Dynamic Record Resizing patch
 		if [[ "$TCP" = 'y' ]]; then
