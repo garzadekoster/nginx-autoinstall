@@ -454,7 +454,8 @@ case $OPTION in
 		--with-cc-opt=-Wno-deprecated-declarations"
 
 
-		NGINX_MODULES="--without-http_ssi_module \
+		NGINX_MODULES="--add-module=/tmp/naxsi/naxsi_src \
+		--without-http_ssi_module \
 		--without-http_scgi_module \
 		--without-http_uwsgi_module \
 		--without-http_geo_module \
@@ -482,9 +483,7 @@ case $OPTION in
                 --with-http_secure_link_module \ 
                 --with-http_spdy_module \
                 --with-http_sub_module \
-                --with-http_xslt_module \
-                --with-mail \
-                --with-mail_ssl_module"
+                --with-mail "
 
 		# Optional modules
 		# LibreSSL 
