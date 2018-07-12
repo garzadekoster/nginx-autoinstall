@@ -475,7 +475,7 @@ case $OPTION in
 		--with-http_realip_module \
 		--with-pcre-jit \
                 --with-ipv6 \
-                --with-http_dav_module \ 
+                --with-http_dav_module \
                 --with-http_flv_module \
                 --with-http_gzip_static_module \
                 --with-http_image_filter_module \
@@ -483,7 +483,7 @@ case $OPTION in
                 --with-http_random_index_module \
                 --with-http_secure_link_module \
                 --with-http_sub_module \
-                --with-mail "
+		--with-mail "
 
 		# Optional modules
 		# LibreSSL 
