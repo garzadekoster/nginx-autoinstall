@@ -476,7 +476,7 @@ case $OPTION in
 		--with-pcre-jit \
                 --with-ipv6 \
                 --with-http_dav_module \
-                --with-http_flv_module \
+		--with-http_flv_module \
                 --with-http_gzip_static_module \
                 --with-http_image_filter_module \
                 --with-http_mp4_module \
