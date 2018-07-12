@@ -439,6 +439,7 @@ case $OPTION in
 		# Modules configuration
 		# Common configuration 
 		NGINX_OPTIONS="
+		--add-module=/tmp/nacsi_src \
 		--prefix=/etc/nginx \
 		--sbin-path=/usr/sbin/nginx \
 		--conf-path=/etc/nginx/nginx.conf \
@@ -454,7 +455,7 @@ case $OPTION in
 		--with-cc-opt=-Wno-deprecated-declarations"
 
 
-		NGINX_MODULES="--add-module=/tmp/naxsi/naxsi_src \
+		NGINX_MODULES="
 		--without-http_ssi_module \
 		--without-http_scgi_module \
 		--without-http_uwsgi_module \
