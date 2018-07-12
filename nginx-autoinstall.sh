@@ -479,10 +479,9 @@ case $OPTION in
                 --with-http_flv_module \
                 --with-http_gzip_static_module \
                 --with-http_image_filter_module \
-                --with-http_mp4_module \ 
-                --with-http_random_index_module \ 
-                --with-http_secure_link_module \ 
-                --with-http_spdy_module \
+                --with-http_mp4_module \
+                --with-http_random_index_module \
+                --with-http_secure_link_module \
                 --with-http_sub_module \
                 --with-mail "
 
