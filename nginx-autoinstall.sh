@@ -439,7 +439,7 @@ case $OPTION in
 		# Modules configuration
 		# Common configuration 
 		NGINX_OPTIONS="
-		--add-module=/tmp/nacsi_src \
+		--add-module=/tmp/naxsi/naxsi_src \
 		--prefix=/etc/nginx \
 		--sbin-path=/usr/sbin/nginx \
 		--conf-path=/etc/nginx/nginx.conf \
