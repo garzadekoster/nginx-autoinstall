@@ -307,7 +307,7 @@ case $OPTION in
 		#if [[ "$NAXSI" = 'y' ]]; then
 		#	cd /usr/local/src/nginx/modules
 		#	echo -ne "       Downloading naxsi    [..]\r"
-		#	git clone https://github.com/nbs-system/naxsi.git >> /tmp/nginx-autoinstall.log 2>&1			
+		#	git clone https://github.com/nbs-system/naxsi.git /tmp/ >> /tmp/nginx-autoinstall.log 2>&1			
 
 		#	if [ $? -eq 0 ]; then
 		#		echo -ne "       Downloading naxsi    [${CGREEN}OK${CEND}]\r"
@@ -459,7 +459,6 @@ case $OPTION in
 		--without-http_ssi_module \
 		--without-http_scgi_module \
 		--without-http_uwsgi_module \
-		--without-http_geo_module \
 		--without-http_split_clients_module \
 		--without-http_memcached_module \
 		--without-http_empty_gif_module \
